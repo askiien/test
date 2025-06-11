@@ -1,0 +1,117 @@
+:root{
+    --background-color: #121517;
+    --main-color: #DADADA;
+    --side-color: #FFFFFF;
+
+    --gradient-color-1: #237249;
+    --gradient-color-2: #35C66B;
+    --gradient: linear-gradient(
+        180deg,
+        var(--gradient-color-1),
+        var(--gradient-color-2)
+    );
+
+    --container-width: 1270px;
+    --container-padding: 10px;
+
+    --font-family: "Montserrat";
+    --transition-duraton: .2s;
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--main-color);
+    font-family: var(--font-family), sans-serif;
+}
+
+a{
+    color: var(--main-color);
+    font-size: 1.32rem;
+    text-decoration: none;
+
+    position: relative;
+}
+
+a:not(.logo)::before{
+    content: '';
+    background-color: var(--main-color);
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    transform: scaleX(0);
+    transition-duration: var(--transition-duraton);
+    
+}
+
+a:not(.logo):hover::before{
+    transform: scaleX(1);
+}
+
+p{
+    color: var(--main-color);
+    font-size: 1.32rem;
+    letter-spacing: -0.2;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-size: 5.12rem;
+    line-height: 1.09;
+}
+
+section{
+    margin-top: 5.12rem;
+}
+
+button{
+    border: none;
+    color: var(--side-color);
+    background: var(--gradient);
+    font-weight: bold;
+    
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+
+.container{
+    max-width: calc(var(--container-width) + var(--container-padding) * 2);
+    padding-inline: var(--container-padding);
+    margin-inline: auto;
+}
+
+.text-gradient{
+    background: var(--gradient);
+    background-clip: text;
+    color: transparent;
+}
+
+
+
+.flash{
+    position: relative;
+}
+
+.flash::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 324px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--gradient);
+    filter: blur(55px);
+    opacity: 0.215;
+    z-index: -1;
+}
+
+.logo{
+    font-size: 2.51rem;
+    font-weight: bold;
+}
+
+
+

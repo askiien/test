@@ -1,0 +1,35 @@
+.header .container{
+    margin-top: 3.77rem;
+    height: 2.71rem;
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+.header .logo{
+    margin-right: 6.22vw;
+}
+
+.header-list{
+    display: flex;
+    column-gap: clamp(10px,6.22vw,94px);
+}
+
+@media (max-width: 525px) {
+    .header a{
+        font-size: 0.87rem;
+    }
+
+    .header .logo{
+        font-size: 1.4rem;
+    }
+
+    .header .container{
+        margin-top: 2.24rem;
+        justify-content: space-between;
+        padding-inline: 25px;
+    }
+}
+
+
